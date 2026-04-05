@@ -23,6 +23,14 @@ Neste repositório foram realizados experimentos baseados no simulador **gem5** 
 
 ---
 
+## Artigo Completo
+
+O artigo **"Análise do Impacto da Hierarquia de Memória no Desempenho de Processadores com gem5"** consolida os resultados dos três eixos experimentais, incluindo a metodologia, os gráficos comparativos e a discussão integrada dos achados. Acesse o documento completo em:
+
+📄 **[Artigo.pdf](./Artigo.pdf)**
+
+---
+
 ## Visão Geral do Projeto
 
 ### OBJETIVOS
