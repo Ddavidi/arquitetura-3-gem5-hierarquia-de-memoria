@@ -22,13 +22,8 @@ O fenômeno em que adicionar mais níveis de cache piora o desempenho pode ser e
 * 32kB: ~3.14% (MPKI 15.65)
 * 64kB: ~3.13% (MPKI 15.62)
 
-**Discussão para o Artigo:**
 Os gráficos de Miss Rate e MPKI comprovam matematicamente o que foi observado no IPC. O ponto de inflexão ocorre perto dos 32kB. O ganho marginal de investir em 64kB em vez de 32kB é menor do que 0.01% na taxa de falha.
 Além disso, o fato das métricas se manterem exatas (L1D independente da topologia geral) prova a consistência e o isolamento arquitetural correto da simulação: Caches mais baixas na hierarquia não afetam o número de acessos e faltas que ocorrem no topo.
-
-## Conclusões Gerais (Dicas para o Texto Final)
-* **Recomendação de Arquitetura:** Para a aplicação de multiplicação de matrizes (*gemm*), no modelo abordado, o "sweet spot" (ponto de equilíbrio ótimo) de custo-benefício é uma L1D de 32kB.
-* **Trade-offs:** Demonstrar na discussão que "mais cache nem sempre é sinônimo de mais desempenho", pois a latência de interconexão sobrepõe os eventuais ganhos de taxa de acerto em hierarquias complexas caso a carga de trabalho não seja otimizada para tirar proveito da temporalidade em grandes volumes de cache.
 
 ---
 *Os gráficos (PNGs) baseados nesta análise encontram-se no diretório `results_figs/`. O arquivo `results_figs/dados_compilados.csv` fornece a tabela completa caso precise formatar no LaTex/Word.*

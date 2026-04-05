@@ -30,11 +30,5 @@ No entanto, quando se estipula o limiar de **100ns**, nota-se uma disrupção si
 Esse súbito engasgamento não resulta apenas do algoritmo, mas do esgotamento mecânico da Cache. Com uma latência excessiva (100ns), as requisições de carga e armazenamento (`Load/Store`) demoram a dar retorno, o que satura os *MSHRs (Miss Status Holding Registers)* do gem5 (estruturas finitas que acomodam os acessos ocorrendo na memória). Com os registradores lotados, as novas requisições vindas dos cálculos de matrizes sequer podem ser acomodadas e viram faltas compulsórias, ou pior, geram estrangulamento do fluxo prefetcher. É um excelente exemplo empírico do que a literatura chama de *"The Memory Wall"* (O Gargalo da Memória).
 
 ---
-
-## 🔹 Pontos Chaves para Incluir na Conclusão do Artigo Final
-- **Excelente Throughput em Workloads Independentes:** Para cargas de trabalho não sincronizadas, investir em múltiplos núcleos nesta arquitetura se comprovou extremamente válido se a memória conseguir acompanhá-los. Tivemos uma ampliação quase linear da vazão de processamento.
-- **Estrangulamento (Bottleneck) Aos 100ns:** O sistema mostrou seu "Breaking Point". Enquanto 30ns e 50ns de latência lidaram com quatro núcleos rodando densas contas de matriz, 100ns de latência sufocou o controlador, induzindo exaustão estrutural nas caches. Isso reflete no artigo o preceito de que silício computacional abundante exige infraestrutura rápida de dados, ou os ciclos do núcleo serão desperdiçados em `stalls`.
-
----
 *Fim do Relatório*
 
