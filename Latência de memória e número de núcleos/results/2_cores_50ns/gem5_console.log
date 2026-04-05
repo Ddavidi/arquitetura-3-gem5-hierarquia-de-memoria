@@ -1,0 +1,38 @@
+Global frequency set at 1000000000000 ticks per second
+warn: No dot file generated. Please install pydot to generate the dot file and pdf.
+src/base/statistics.hh:279: warn: One of the stats is a legacy stat. Legacy stat is a stat that does not belong to any statistics::Group. Legacy stat is deprecated.
+src/base/remote_gdb.cc:418: warn: Sockets disabled, not accepting gdb connections
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 25.1.0.0
+gem5 compiled Mar 28 2026 20:44:11
+gem5 started Mar 31 2026 21:07:27
+gem5 executing on DESKTOP-KDI6MSP, pid 11566
+command line: ./gem5/build/X86/gem5.opt -d ./results/2_cores_50ns ./configs/multicore_latency_test.py 2 50ns
+
+info: Standard input is not a terminal, disabling listeners.
+--- Configurando Simulação Arquitetural ---
+Número de Núcleos (Cores): 2
+Latência de Memória: 50ns
+Workload: Polybench GEMM (Aceleração de Álgebra Linear)
+Objetivo: Analisar latência de memória e escalabilidade de núcleos no gemm
+Carregando binário GEMM local para 2 núcleo(s): /home/dd/documentos/arquitetura-3-gem5-hierarquia-de-memoria/configs/../workloads/polybench-c/linear-algebra/blas/gemm/gemm_static
+Iniciando simulação... Isso pode levar alguns minutos.
+src/sim/syscall_emul.cc:86: warn: ignoring syscall set_robust_list(...)
+src/sim/syscall_emul.cc:86: warn: ignoring syscall set_robust_list(...)
+src/sim/syscall_emul.cc:86: warn: ignoring syscall rseq(...)
+src/sim/syscall_emul.cc:86: warn: ignoring syscall rseq(...)
+src/sim/mem_state.cc:443: info: Increasing stack size by one page.
+src/sim/mem_state.cc:443: info: Increasing stack size by one page.
+src/sim/syscall_emul.hh:1127: warn: readlink() called on '/proc/self/exe' may yield unexpected results in various settings.
+      Returning '/home/dd/documentos/arquitetura-3-gem5-hierarquia-de-memoria/workloads/polybench-c/linear-algebra/blas/gemm/gemm_static'
+src/sim/syscall_emul.cc:86: warn: ignoring syscall mprotect(...)
+src/sim/syscall_emul.cc:86: warn: ignoring syscall mprotect(...)
+3.929954
+3.929954
+free(): invalid pointer
+src/sim/syscall_emul.cc:97: warn: ignoring syscall rt_sigprocmask(...)
+      (further warnings will be suppressed)
+--- Simulação Concluída ---
+Verifique os resultados na pasta de saída (m5out ou especificada por -d)
